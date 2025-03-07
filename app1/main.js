@@ -110,6 +110,7 @@ function get_verse_from_url() {
  // url = http://xyz.com?X ,
  // search = ?X
  let search = url.search;  // a string, possibly empty
+ search = decodeURI(search);
  let defaultval = [0,0]; // default value (title verse)
  let x = search.match(/^[?]([khgṅcjñṭḍṇtdnpbmyrlvśṣsao]+),([0-9]+)$/);
  console.log(x);
